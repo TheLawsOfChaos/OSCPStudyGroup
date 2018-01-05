@@ -1,0 +1,24 @@
+#updating Powershell-Empire
+echo -e "\033[31mInstalling Empire\033[m"
+rm -rf /opt/Post-Exploitation/Empire/
+git clone https://github.com/PowerShellEmpire/Empire.git /opt/Post-Exploitation/Empire/
+
+#update linux exploit suggester
+echo -e "\033[31mlinux exploit suggester\033[m"
+rm -rf /opt/vulnerability-analysis/Network/Linux_Exploit_Suggester-master/
+git clone https://github.com/PenturaLabs/Linux_Exploit_Suggester.git /opt/vulnerability-analysis/Network/Linux_Exploit_Suggester-master/
+
+#update windows exploit suggester
+echo -e "\033[31mwindows exploit suggester\033[m"
+rm -rf /opt/vulnerability-analysis/Network/Windows-Exploit-Suggester/
+git clone https://github.com/GDSSecurity/Windows-Exploit-Suggester.git /opt/vulnerability-analysis/Network/Windows-Exploit-Suggester/
+			
+#update fuzzdb
+echo -e "\033[31mfuzzdb\033[m"			
+rm -rf /opt/intelligence-gathering/fuzzdb/
+git clone https://github.com/rustyrobot/fuzzdb.git /opt/intelligence-gathering/fuzzdb/
+
+#update PowerShellRecon
+echo -e "\033[31mPowerShellRecon\033[m"
+rm -rf /opt/Post-Exploitation/PSRecon/
+git clone https://github.com/gfoss/PSRecon.git /opt/Post-Exploitation/PSRecon/
