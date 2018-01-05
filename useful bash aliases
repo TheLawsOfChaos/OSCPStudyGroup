@@ -73,4 +73,8 @@ function extract {
 fi
 }
 
+<<<<<<< HEAD
 alias BASHRELOAD='. ~/.bashrc; echo -e "\033[31mBash Aliases Reloaded\033[m"'
+=======
+alias BASHRELOAD='. ~/.bashrc; echo -e "\033[31mBash Aliases Reloaded\033[m"'
+>>>>>>> e85f39ec3fcd119894671781712455caa36c2b68

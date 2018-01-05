@@ -21,4 +21,8 @@ git clone https://github.com/rustyrobot/fuzzdb.git /opt/intelligence-gathering/f
 #update PowerShellRecon
 echo -e "\033[31mPowerShellRecon\033[m"
 rm -rf /opt/Post-Exploitation/PSRecon/
+<<<<<<< HEAD
 git clone https://github.com/gfoss/PSRecon.git /opt/Post-Exploitation/PSRecon/
+=======
+git clone https://github.com/gfoss/PSRecon.git /opt/Post-Exploitation/PSRecon/
+>>>>>>> e85f39ec3fcd119894671781712455caa36c2b68
