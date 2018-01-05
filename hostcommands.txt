@@ -1,4 +1,0 @@
-host -t ns megacorpone.com name severs
-host -t mx megacorpone.com mail servers
-host -l -a megacorpone.com ns2.megacorpone.com zonetransfer information
-
