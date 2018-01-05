@@ -1,5 +1,5 @@
 #Rerun the last command, but as sudo
-alias gah='sudo $(histroy -p \!\!)'
+alias fuck='sudo $(history -p \!\!)'
 
 # some more ls aliases
 alias ll='ls -l'
@@ -22,9 +22,23 @@ if [ -z "$1" ]; then
 fi
 }
 
-#nmap command?
-alias nmap1='nmap -v -sP -oA '
-alias nmap2='nmap --open -n -v -sV -O -oA '
+function nmap1 {
+ if [ -z "$1" ]; then
+    # display usage if no parameters given
+    echo "Usage: nmap1 <reportname> <target options> ex. nmap1 report -iL IPlist.txt"
+ else
+    nmap -v -sP -oA $1 $2 $3
+fi
+}
+
+function nmap2 {
+ if [ -z "$1" ]; then
+    # display usage if no parameters given
+    echo "Usage: nmap2 <reportname> <target options> ex. nmap1 report -iL IPlist.txt"
+ else
+    nmap  --open -n -v -sV -O -oA $1 $2 $3
+fi
+}
 
 #Function to extract any file type
 function extract {
@@ -58,3 +72,5 @@ function extract {
     fi
 fi
 }
+
+alias BASHRELOAD='. ~/.bashrc; echo -e "\033[31mBash Aliases Reloaded\033[m"'
