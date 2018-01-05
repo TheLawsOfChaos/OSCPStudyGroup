@@ -1,0 +1,2 @@
+#Rerun the last command, but as sudo
+alias gah='sudo $(histroy -p \!\!)'
