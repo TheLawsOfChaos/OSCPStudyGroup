@@ -1,0 +1,27 @@
+Edit your .bashrc (or I guess another file to not overwrite the normal file, I just comment the original PS1 line) and go to where you have "unset color_prompt force_color_prompt"
+
+Put this above the if check:
+
+
+
+#adding custom color prompt stuff
+
+reset=$(tput sgr0)
+bold=$(tput bold)
+Black=$(tput setaf 0)
+red=$(tput setaf 1)
+green=$(tput setaf 2)
+yellow=$(tput setaf 3)
+blue=$(tput setaf 4)
+magenta=$(tput setaf 5)
+cyan=$(tput setaf 6)
+white=$(tput setaf 7)
+user_color=$green
+
+This will allow you to change the colors in your prompt quite easily, instead of memorizing the ascii codes and having to put them in.
+
+The one I prefer most is : PS1="\[$bold\]\[$cyan\][\A]\D{%d.%m.%Y} \[$red\]\u@h:\[$green\]\w\[$reset\]# "
+
+
+
+This makes the prompt present as this [hh:mm]dd.mm.yyyy user@hostname:fullpath# but obviously with colors. I find it pretty effective when writing up reports, as my findings always have the timestamp in it. BUT the important part here, is instead of a reset at the end, you can put a color, and the color will continue on. So if I didn't put the [$reset\] the console text would be the same lime green.
